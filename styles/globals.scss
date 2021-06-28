@@ -67,8 +67,10 @@ a {
         li .logo {
             display: flex;
             align-items: center;
-            color: var(--color-accent);
-            font-size: 1.8rem;
+            color: var(--color-bg0);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
 
             svg {
                 width: 60px;
