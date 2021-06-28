@@ -14,16 +14,38 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Inconsolata";
+    src: url("/fonts/Inconsolata-Regular.ttf");
+    font-style: bold;
+    font-weight: 600;
+    font-display: swap;
+}
+
 :root {
     --color-bg: #0c2444;
     --color-bg0: #ffffff;
+    --color-bg30: #4670a8;
     --color-bg50: #003a85;
-    --color-bg60: #142f5f;
-    --color-bg80: #09244a;
+    --color-bg60: #202f55;
+    --color-bg80: #092349;
+    --color-bg90: #021d44;
     --color-bg100: #001c39;
     --color-accent: #fe3e54;
     --color-shadow: #00000027;
-    --navbar-height: 70px;
+    --navbar-height: 100px;
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 10px;
+    }
+
+    @media only screen and (max-width: 325px) {
+        font-size: 8px;
+    }
+
+    @media only screen and (max-height: 700px) {
+        --navbar-height: 70px;
+    }
 }
 
 html,
@@ -68,13 +90,19 @@ a {
             display: flex;
             align-items: center;
             color: var(--color-bg0);
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 0.4rem;
+            font-family: Inconsolata;
+            line-height: 1.5;
+
+            &:hover {
+                color: var(--color-accent);
+            }
 
             svg {
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 margin-right: 20px;
             }
         }

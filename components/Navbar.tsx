@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => {
                 <li>
                     <Link href="/">
                         <a className="logo">
-                            <Logo /> Raymon Zhang
+                            <Logo /> Raymon<br />Zhang
                         </a>
                     </Link>
                 </li>

@@ -4,35 +4,216 @@
     width: 100vw;
     display: flex;
     justify-content: center;
+    background-color: var(--color-bg90);
 
     .heroContainer {
         width: 85vw;
         max-width: 85vw;
         display: flex;
-        justify-content: space-between;
+        height: 100%;
 
         .heroInner {
+            z-index: 1;
             display: flex;
             align-items: center;
 
             .heroCopy {
                 color: var(--color-bg0);
+                margin-bottom: 5rem;
+
+                @media only screen and (max-width: 590px) {
+                    margin-bottom: 20rem;
+                }
+
                 mark {
                     color: var(--color-accent);
                     background-color: transparent;
+
+                    &.period {
+                        color: var(--color-bg50);
+                    }
                 }
 
                 .heroTitle {
-                    font-weight: normal;
+                    font-weight: bold;
                     margin-top: 0;
                     font-size: 5rem;
+                    margin-bottom: 1rem;
                 }
 
                 .heroSubtitle {
+                    margin-top: 0;
                     font-weight: normal;
-                    font-size: 4rem;
+                    font-size: 3.5rem;
+                    margin-bottom: 0;
                 }
             }
+        }
+
+        .heroProfile {
+            position: absolute;
+            top: 0;
+            height: 100vh;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 7.5vw;
+            z-index: 100;
+
+            @media only screen and (max-width: 590px) {
+                left: 0;
+                right: 0;
+                top: 80vh;
+                height: 20vh;
+            }
+
+            .heroProfileCard {
+                display: flex;
+                align-items: center;
+                background-color: var(--color-bg60);
+                box-shadow: 0px 5px 20px var(--color-shadow);
+                padding: 20px;
+                opacity: 0;
+                border-radius: 15px;
+                animation: profileAnimation 500ms;
+                animation-fill-mode: forwards;
+                animation-delay: 1250ms;
+                transition: width 500ms;
+                overflow: hidden;
+
+                @media only screen and (max-width: 405px) {
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+
+                @keyframes profileAnimation {
+                    0% {
+                        margin-bottom: 0;
+                        opacity: 0;
+                    }
+
+                    100% {
+                        margin-bottom: 20rem;
+                        opacity: 1;
+                    }
+                }
+
+                .imageContainer {
+                    width: 144px;
+                    height: 144px;
+                    position: relative;
+
+                    @media only screen and (max-width: 1050px) {
+                        width: 72px;
+                        height: 72px;
+                    }
+
+                    .profilePhoto {
+                        border-radius: 9999px;
+                    }
+                }
+
+                .profileDescription {
+                    color: var(--color-bg0);
+                    margin-left: 20px;
+
+                    @media only screen and (max-width: 325px) {
+                        margin-left: 10px;
+                    }
+
+                    h3 {
+                        font-weight: normal;
+                        font-size: 0;
+                        margin-top: 0;
+                        margin-bottom: 2rem;
+                        text-overflow: clip;
+                        white-space: nowrap;
+                        animation: descriptionHeadingAnimation 500ms;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2000ms;
+
+                        @keyframes descriptionHeadingAnimation {
+                            from {
+                                opacity: 0;
+                                font-size: 0;
+                            }
+
+                            to {
+                                opacity: 1;
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 0;
+                        color: var(--color-bg30);
+                        margin-bottom: 0;
+                        text-overflow: clip;
+                        white-space: nowrap;
+                        animation: descriptionSubAnimation 500ms;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2000ms;
+
+                        @media only screen and (max-width: 325px) {
+                            white-space: initial;
+                        }
+
+                        @keyframes descriptionSubAnimation {
+                            from {
+                                opacity: 0;
+                                font-size: 0;
+                            }
+
+                            to {
+                                opacity: 1;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .bgBox {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: var(--color-bg80);
+            height: 100vh;
+            width: 0vw;
+            animation: slideInRight 500ms;
+            animation-delay: 200ms;
+            animation-fill-mode: forwards;
+
+            @keyframes slideInRight {
+                from {
+                    width: 0vw;
+                }
+
+                to {
+                    width: 50vw;
+                }
+            }
+        }
+
+        .bgVerticalLine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 7vw;
+            border-right: 2px dashed var(--color-bg60);
+        }
+
+        .bgHorizontalLine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 30vh;
+            width: 100vw;
+            border-bottom: 2px dashed var(--color-bg60);
         }
     }
 }

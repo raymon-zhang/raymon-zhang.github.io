@@ -19,6 +19,12 @@ function MyApp({ Component, pageProps }: AppProps) {
                     as="font"
                     crossOrigin=""
                 />
+                <link
+                    rel="preload"
+                    href="/fonts/Inconsolata-Regular.ttf"
+                    as="font"
+                    crossOrigin=""
+                />
             </Head>
             <Component {...pageProps} />
         </>
