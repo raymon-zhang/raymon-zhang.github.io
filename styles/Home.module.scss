@@ -1,0 +1,38 @@
+.hero {
+    min-height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height));
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .heroContainer {
+        width: 85vw;
+        max-width: 85vw;
+        display: flex;
+        justify-content: space-between;
+
+        .heroInner {
+            display: flex;
+            align-items: center;
+
+            .heroCopy {
+                color: var(--color-bg0);
+                mark {
+                    color: var(--color-accent);
+                    background-color: transparent;
+                }
+
+                .heroTitle {
+                    font-weight: normal;
+                    margin-top: 0;
+                    font-size: 5rem;
+                }
+
+                .heroSubtitle {
+                    font-weight: normal;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
