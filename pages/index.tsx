@@ -42,6 +42,7 @@ export default function Home() {
                                     layout="fill"
                                     src={profilePic}
                                     className={styles.profilePhoto}
+                                    alt="Raymon"
                                 />
                             </div>
                             <div className={styles.profileDescription}>
