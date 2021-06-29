@@ -17,6 +17,9 @@ export default function Home() {
                     <div className={styles.bgBox} />
                     <div className={styles.bgVerticalLine} />
                     <div className={styles.bgHorizontalLine} />
+                    <div className={styles.scrollCta}>
+                        <div className={styles.scrollCtaInner} />
+                    </div>
                     <div className={styles.heroInner}>
                         <div className={styles.heroCopy}>
                             <Bounce>

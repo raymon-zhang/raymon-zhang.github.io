@@ -64,7 +64,7 @@
             @media only screen and (max-width: 590px) {
                 left: 0;
                 right: 0;
-                top: 80vh;
+                top: 70vh;
                 height: 20vh;
             }
 
@@ -214,6 +214,50 @@
             height: 30vh;
             width: 100vw;
             border-bottom: 2px dashed var(--color-bg60);
+        }
+
+        .scrollCta {
+            position: absolute;
+            left: 50%;
+            top: 80vh;
+            transform: translateX(-50%);
+            height: 5rem;
+            width: 3rem;
+            border: 3px solid var(--color-bg0);
+            border-radius: 9999px;
+
+            &::after {
+                content: "scroll to discover";
+                position: absolute;
+                top: 120%;
+                left: 50%;
+                color: #ffffff;
+                text-align: center;
+                width: 18ch;
+                margin-left: -9ch;
+            }
+
+            .scrollCtaInner {
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: var(--color-bg0);
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                top: calc(0.75rem - 3px);
+                transform: translateX(-50%);
+                animation: scrollCtaAnimation 1500ms ease infinite;
+
+                @keyframes scrollCtaAnimation {
+                    75% {
+                        top: calc(2.75rem - 3px);
+                    }
+                    100% {
+                        top: calc(2.75rem - 3px);
+                        opacity: 0;
+                    }
+                }
+            }
         }
     }
 }
