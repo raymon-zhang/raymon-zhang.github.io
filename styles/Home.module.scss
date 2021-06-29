@@ -74,29 +74,13 @@
                 background-color: var(--color-bg60);
                 box-shadow: 0px 5px 20px var(--color-shadow);
                 padding: 20px;
-                opacity: 0;
                 border-radius: 15px;
-                animation: profileAnimation 500ms;
-                animation-fill-mode: forwards;
-                animation-delay: 1250ms;
                 transition: width 500ms;
                 overflow: hidden;
 
                 @media only screen and (max-width: 405px) {
                     padding: 10px;
                     border-radius: 10px;
-                }
-
-                @keyframes profileAnimation {
-                    0% {
-                        margin-bottom: 0;
-                        opacity: 0;
-                    }
-
-                    100% {
-                        margin-bottom: 20rem;
-                        opacity: 1;
-                    }
                 }
 
                 .imageContainer {
@@ -124,52 +108,20 @@
 
                     h3 {
                         font-weight: normal;
-                        font-size: 0;
                         margin-top: 0;
                         margin-bottom: 2rem;
                         text-overflow: clip;
                         white-space: nowrap;
-                        animation: descriptionHeadingAnimation 500ms;
-                        animation-fill-mode: forwards;
-                        animation-delay: 2000ms;
-
-                        @keyframes descriptionHeadingAnimation {
-                            from {
-                                opacity: 0;
-                                font-size: 0;
-                            }
-
-                            to {
-                                opacity: 1;
-                                font-size: 2rem;
-                            }
-                        }
                     }
 
                     p {
-                        font-size: 0;
                         color: var(--color-bg30);
                         margin-bottom: 0;
                         text-overflow: clip;
                         white-space: nowrap;
-                        animation: descriptionSubAnimation 500ms;
-                        animation-fill-mode: forwards;
-                        animation-delay: 2000ms;
 
                         @media only screen and (max-width: 325px) {
                             white-space: initial;
-                        }
-
-                        @keyframes descriptionSubAnimation {
-                            from {
-                                opacity: 0;
-                                font-size: 0;
-                            }
-
-                            to {
-                                opacity: 1;
-                                font-size: 1.2rem;
-                            }
                         }
                     }
                 }
@@ -183,19 +135,6 @@
             background-color: var(--color-bg80);
             height: 100vh;
             width: 0vw;
-            animation: slideInRight 500ms;
-            animation-delay: 200ms;
-            animation-fill-mode: forwards;
-
-            @keyframes slideInRight {
-                from {
-                    width: 0vw;
-                }
-
-                to {
-                    width: 50vw;
-                }
-            }
         }
 
         .bgVerticalLine {
@@ -225,20 +164,8 @@
             width: 3rem;
             border: 3px solid var(--color-bg0);
             border-radius: 9999px;
-            opacity: 0;
-            animation: fadeIn 500ms ease;
-            animation-delay: 2500ms;
-            animation-fill-mode: forwards;
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
+            display: flex;
+            justify-content: center;
 
             &::after {
                 content: "scroll to discover";
@@ -257,21 +184,6 @@
                 background-color: var(--color-bg0);
                 border-radius: 50%;
                 position: absolute;
-                left: 50%;
-                top: calc(0.75rem - 3px);
-                transform: translateX(-50%);
-                animation: scrollCtaAnimation 1500ms ease infinite;
-                animation-delay: 2500ms;
-
-                @keyframes scrollCtaAnimation {
-                    75% {
-                        top: calc(2.75rem - 3px);
-                    }
-                    100% {
-                        top: calc(2.75rem - 3px);
-                        opacity: 0;
-                    }
-                }
             }
         }
     }
