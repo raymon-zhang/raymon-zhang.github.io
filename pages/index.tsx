@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 
@@ -18,7 +19,7 @@ export default function Home() {
                         initial={{ width: "0vw" }}
                         animate={{ width: "50vw" }}
                         transition={{
-                            delay: 0.5,
+                            delay: 0.2,
                             ease: "easeOut",
                             duration: 0.5,
                         }}
@@ -66,10 +67,10 @@ export default function Home() {
                                 transition={{
                                     delay: 0.75,
                                     type: "spring",
-                                    mass: 0.2,
-                                    damping: 7,
-                                    stiffness: 70,
-                                    bounce: 0.7,
+                                    mass: 1.2,
+                                    damping: 15,
+                                    stiffness: 120,
+                                    bounce: 0.5,
                                     duration: 0.5,
                                 }}
                             >
@@ -118,7 +119,12 @@ export default function Home() {
                                 >
                                     <div className={styles.profileDescription}>
                                         <h3>Raymon Zhang</h3>
-                                        <p>14 year old student devloper</p>
+                                        {/* <p>14 year old student devloper</p> */}
+                                        <Link href="#projects">
+                                            <a className={styles.profileCta}>
+                                                discover more
+                                            </a>
+                                        </Link>
                                     </div>
                                 </motion.div>
                             </div>
