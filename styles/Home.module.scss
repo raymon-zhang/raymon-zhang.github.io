@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--color-bg90);
+    border-bottom: 2px dashed var(--color-bg60);
 
     .heroContainer {
         width: 85vw;
@@ -54,12 +55,10 @@
             position: absolute;
             top: 0;
             height: 100vh;
-            z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             right: 7.5vw;
-            z-index: 100;
 
             @media only screen and (max-width: 590px) {
                 left: 0;
@@ -87,14 +86,12 @@
                     width: 144px;
                     height: 144px;
                     position: relative;
+                    border-radius: 9999px;
+                    overflow: hidden;
 
                     @media only screen and (max-width: 1050px) {
                         width: 72px;
                         height: 72px;
-                    }
-
-                    .profilePhoto {
-                        border-radius: 9999px;
                     }
                 }
 
@@ -139,6 +136,7 @@
             background-color: var(--color-bg80);
             height: 100vh;
             width: 0vw;
+            border-bottom: 2px dashed var(--color-bg60);
         }
 
         .bgVerticalLine {
@@ -188,6 +186,67 @@
                 background-color: var(--color-bg0);
                 border-radius: 50%;
                 position: absolute;
+            }
+        }
+    }
+}
+
+.projects {
+    .projectsList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .project {
+            margin: 20vw 0;
+            opacity: 0.2;
+            transform: scale(0.94);
+            transition: all 500ms;
+
+            &.visible {
+                opacity: 1;
+                transform: scale(0.975);
+
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+
+            .projectDescription {
+                position: absolute;
+                color: var(--color-bg0);
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                top: -5rem;
+
+                @media only screen and (max-width: 620px) {
+                    display: none;
+                }
+
+                h3 {
+                    font-size: 3rem;
+                    margin: 0;
+                    font-weight: normal;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .projectImage {
+                width: 60vw;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0px 10px 30px 5px var(--color-shadow);
+
+                @media only screen and (max-width: 620px) {
+                    width: 90vw;
+                }
             }
         }
     }

@@ -2,11 +2,15 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
 
 import { DefaultLayout } from "../layouts/DefaultLayout";
 
 import profilePic from "../public/images/profilePhoto.jpg";
+import kidoopPic from "../public/images/kidoop.png";
+import dynamilyPic from "../public/images/dynamily.png";
 
 import styles from "../styles/Home.module.scss";
 
@@ -102,6 +106,7 @@ export default function Home() {
                                 <div className={styles.imageContainer}>
                                     <Image
                                         priority
+                                        placeholder="blur"
                                         layout="fill"
                                         src={profilePic}
                                         className={styles.profilePhoto}
@@ -119,7 +124,6 @@ export default function Home() {
                                 >
                                     <div className={styles.profileDescription}>
                                         <h3>Raymon Zhang</h3>
-                                        {/* <p>14 year old student devloper</p> */}
                                         <Link href="#projects">
                                             <a className={styles.profileCta}>
                                                 discover more
@@ -132,6 +136,70 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <section className={styles.projects} id="projects">
+                <ul className={styles.projectsList}>
+                    <Project
+                        link="https://kidoop.ga/"
+                        image={kidoopPic}
+                        name="Kidoop"
+                        description="Helping students find their teachers"
+                    />
+                    <Project
+                        link="https://dynamily.tk/"
+                        image={dynamilyPic}
+                        name="Dynamily"
+                        description="Empowering families to stay organized"
+                    />
+                </ul>
+            </section>
         </DefaultLayout>
     );
 }
+
+type ProjectProps = {
+    link: string;
+    image: StaticImageData;
+    name: string;
+    description: string;
+};
+
+const Project: React.FC<ProjectProps> = ({
+    link,
+    image,
+    name,
+    description,
+}) => {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+
+    return (
+        <li
+            ref={ref}
+            className={`${styles.project} ${inView && styles.visible}`}
+        >
+            <a href={link}>
+                <AnimatePresence>
+                    {inView && (
+                        <motion.div
+                            className={styles.projectDescription}
+                            initial={{ opacity: 0, y: "50%" }}
+                            animate={{ opacity: 1, y: "0%" }}
+                            exit={{ opacity: 0, y: "50%" }}
+                        >
+                            <h3>{name}</h3>
+                            <p>{description}</p>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+                <div className={`${styles.projectImage}`}>
+                    <Image
+                        src={image}
+                        alt={name}
+                        className={styles.projectImage}
+                    />
+                </div>
+            </a>
+        </li>
+    );
+};
