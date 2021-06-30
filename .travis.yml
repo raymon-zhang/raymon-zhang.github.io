@@ -7,7 +7,7 @@ cache:
 script:
     - npm run build
     - npm run export
-    - touch out/.nojekyll
+    - touch /out/.nojekyll
 deploy:
     provider: pages
     skip_cleanup: true
