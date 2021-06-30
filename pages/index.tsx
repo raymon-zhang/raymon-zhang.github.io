@@ -94,7 +94,7 @@ export default function Home() {
                             }}
                             animate={{
                                 opacity: 1,
-                                transform: "translateY(-10rem)",
+                                transform: "translateY(-5rem)",
                             }}
                             transition={{
                                 delay: 1.25,
@@ -104,32 +104,32 @@ export default function Home() {
                         >
                             <div className={styles.heroProfileCard}>
                                 <div className={styles.imageContainer}>
-                                    <Image
+                                    {/* <Image
                                         priority
                                         placeholder="blur"
-                                        layout="fill"
-                                        src={profilePic}
+                                        layout="fill" */}
+                                    <img
+                                        src="/images/profilePhoto.jpg"
                                         className={styles.profilePhoto}
                                         alt="Raymon"
                                     />
                                 </div>
                                 <motion.div
-                                    initial={{ width: 0, opacity: 0 }}
-                                    animate={{ width: "auto", opacity: 1 }}
+                                    initial={{ maxWidth: 0, opacity: 0 }}
+                                    animate={{ maxWidth: "8rem", opacity: 1 }}
                                     transition={{
                                         delay: 2,
                                         ease: "easeOut",
                                         duration: 0.5,
                                     }}
+                                    className={styles.profileDescription}
                                 >
-                                    <div className={styles.profileDescription}>
-                                        <h3>Raymon Zhang</h3>
-                                        <Link href="#projects">
-                                            <a className={styles.profileCta}>
-                                                discover more
-                                            </a>
-                                        </Link>
-                                    </div>
+                                    <h3>Raymon Zhang</h3>
+                                    <Link href="/about">
+                                        <a className={styles.profileCta}>
+                                            about me
+                                        </a>
+                                    </Link>
                                 </motion.div>
                             </div>
                         </motion.div>
@@ -140,13 +140,13 @@ export default function Home() {
                 <ul className={styles.projectsList}>
                     <Project
                         link="https://kidoop.ga/"
-                        image={kidoopPic}
+                        image="/images/kidoop.png"
                         name="Kidoop"
                         description="Helping students find their teachers"
                     />
                     <Project
                         link="https://dynamily.tk/"
-                        image={dynamilyPic}
+                        image="/images/dynamily.png"
                         name="Dynamily"
                         description="Empowering families to stay organized"
                     />
@@ -158,7 +158,7 @@ export default function Home() {
 
 type ProjectProps = {
     link: string;
-    image: StaticImageData;
+    image: string;
     name: string;
     description: string;
 };
@@ -193,7 +193,8 @@ const Project: React.FC<ProjectProps> = ({
                     )}
                 </AnimatePresence>
                 <div className={`${styles.projectImage}`}>
-                    <Image
+                    {/* <Image */}
+                    <img
                         src={image}
                         alt={name}
                         className={styles.projectImage}

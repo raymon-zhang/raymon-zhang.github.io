@@ -103,27 +103,47 @@ a {
         margin: 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         height: 100%;
 
-        li .logo {
+        li {
             display: flex;
             align-items: center;
             color: var(--color-bg0);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.4rem;
-            font-family: Inconsolata;
-            line-height: 1.5;
+            height: 100%;
 
-            &:hover {
-                color: var(--color-accent);
+            &.logoListItem {
+                margin-right: auto;
+
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.4rem;
+                    font-family: Inconsolata;
+                    line-height: 1.5;
+
+                    &:hover {
+                        color: var(--color-accent);
+                    }
+
+                    svg {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 20px;
+                    }
+                }
             }
 
-            svg {
-                width: 50px;
-                height: 50px;
-                margin-right: 20px;
+            &.navLink {
+                font-weight: normal;
+                font-size: 1.5rem;
+                margin-left: 10vw;
+                transform: color 500ms;
+
+                &:hover {
+                    color: var(--color-accent);
+                }
             }
         }
     }
