@@ -8,10 +8,6 @@ import { useInView } from "react-intersection-observer";
 
 import { DefaultLayout } from "../layouts/DefaultLayout";
 
-import profilePic from "../public/images/profilePhoto.jpg";
-import kidoopPic from "../public/images/kidoop.png";
-import dynamilyPic from "../public/images/dynamily.png";
-
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {

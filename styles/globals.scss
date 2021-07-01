@@ -139,7 +139,7 @@ a {
                 font-weight: normal;
                 font-size: 1.5rem;
                 margin-left: 10vw;
-                transform: color 500ms;
+                transition: color 500ms;
 
                 &:hover {
                     color: var(--color-accent);
