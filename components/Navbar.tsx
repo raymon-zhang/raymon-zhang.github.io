@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Logo from "../icons/logo.svg";
 
-export const Navbar: React.FC = () => {
+const Navbar: React.FC = () => {
     return (
         <nav className="navbar">
             <ul>
@@ -29,3 +29,5 @@ export const Navbar: React.FC = () => {
         </nav>
     );
 };
+
+export default Navbar;
