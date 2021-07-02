@@ -152,12 +152,12 @@ export default function Home() {
     );
 }
 
-type ProjectProps = {
+interface ProjectProps {
     link: string;
     image: string;
     name: string;
     description: string;
-};
+}
 
 const Project: React.FC<ProjectProps> = ({
     link,
