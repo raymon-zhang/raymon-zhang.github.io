@@ -1,14 +1,33 @@
+import { MotionProps } from "framer-motion";
+
 import { DefaultLayout } from "../layouts/DefaultLayout";
 
 import Reveal from "../components/Reveal";
 
 import styles from "../styles/about.module.scss";
 
+import ReactLogo from "/icons/react.svg";
+import HTMLLogo from "../icons/html.svg";
+import CSSLogo from "../icons/css.svg";
+import JSLogo from "../icons/js.svg";
+import TSLogo from "../icons/ts.svg";
+import NodeJSLogo from "../icons/nodejs.svg";
+import ReactNativeLogo from "../icons/react.svg";
+import PythonLogo from "../icons/Python.svg";
+import JavaLogo from "../icons/java.svg";
+import CPPLogo from "../icons/c++.svg";
+
 export default function About() {
     const calculateAge = (birthday: Date) => {
         const ageDiffMs = Date.now() - birthday.getTime();
         const ageDate = new Date(ageDiffMs);
         return Math.abs(ageDate.getUTCFullYear() - 1970);
+    };
+
+    const skillsCardMotionProps: MotionProps = {
+        initial: { y: 100, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+        // exit: { y: 100, opacity: 0, display: "none" },
     };
 
     return (
@@ -58,6 +77,71 @@ export default function About() {
                             technologies, doing competitive programming, and
                             playing video games.
                         </p>
+                    </Reveal>
+                </div>
+            </section>
+            <section className={styles.skills}>
+                <h2 className={styles.skillsHeading}>My skills</h2>
+                <div className={styles.skillGrid}>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <ReactLogo />
+                            React <mark>advanced</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <PythonLogo />
+                            Python <mark>advanced</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <JavaLogo />
+                            Java <mark>intermediate</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <CPPLogo />
+                            C++ <mark>beginner</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <JSLogo />
+                            JS <mark>advanced</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <TSLogo />
+                            TS <mark>beginner</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <HTMLLogo />
+                            HTML <mark>expert</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <CSSLogo />
+                            CSS <mark>expert</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <NodeJSLogo />
+                            Node.js <mark>beginner</mark>
+                        </div>
+                    </Reveal>
+                    <Reveal motionProps={skillsCardMotionProps}>
+                        <div className={styles.skillCard}>
+                            <ReactLogo />
+                            React Native <mark>beginner</mark>
+                        </div>
                     </Reveal>
                 </div>
             </section>
