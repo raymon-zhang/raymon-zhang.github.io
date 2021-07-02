@@ -139,7 +139,7 @@ export default function About() {
                     </Reveal>
                     <Reveal motionProps={skillsCardMotionProps}>
                         <div className={styles.skillCard}>
-                            <ReactLogo />
+                            <ReactNativeLogo />
                             React Native <mark>beginner</mark>
                         </div>
                     </Reveal>
