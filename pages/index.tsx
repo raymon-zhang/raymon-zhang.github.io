@@ -90,7 +90,7 @@ export default function Home() {
                             }}
                             animate={{
                                 opacity: 1,
-                                transform: "translateY(-5rem)",
+                                transform: "translateY(-6rem)",
                             }}
                             transition={{
                                 delay: 1.25,
@@ -105,7 +105,7 @@ export default function Home() {
                                         placeholder="blur"
                                         layout="fill" */}
                                     <img
-                                        src="/images/profilePhoto.jpg"
+                                        src="/images/me.png"
                                         className={styles.profilePhoto}
                                         alt="Raymon"
                                     />

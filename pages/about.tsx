@@ -29,7 +29,9 @@ export default function About() {
                         }}
                         className={styles.heroInner}
                     >
-                        <img src="/images/profilePhoto.jpg" alt="Raymon" />
+                        <div className={styles.heroImage}>
+                            <img src="/images/me.png" alt="Raymon" />
+                        </div>
                     </Reveal>
                     <Reveal
                         motionProps={{
