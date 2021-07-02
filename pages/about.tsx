@@ -52,9 +52,9 @@ export default function About() {
                         </h1>
                         <p className={styles.heroSub}>
                             I work to create innovative solutions to complex
-                            problems. I enjoy learning about new technologies,
-                            doing competitive programming, and playing video
-                            games.
+                            problems. I also enjoy learning about new
+                            technologies, doing competitive programming, and
+                            playing video games.
                         </p>
                     </Reveal>
                 </div>

@@ -1,15 +1,20 @@
 .hero {
     min-height: calc(100vh - var(--navbar-height));
-    height: calc(100vh - var(--navbar-height));
+    // height: calc(100vh - var(--navbar-height));
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .heroContainer {
         width: 85vw;
         max-width: 85vw;
         display: flex;
         height: 100%;
+
+        @media only screen and (max-width: 648px) {
+            flex-direction: column;
+        }
 
         .heroInner {
             width: 100%;
@@ -19,18 +24,30 @@
             flex-direction: column;
             margin: 0 2rem;
 
+            @media only screen and (max-width: 648px) {
+                margin: 2rem 0;
+            }
+
             .heroTitle {
                 color: var(--color-bg0);
                 font-weight: bold;
                 font-size: 4rem;
                 margin-top: 0;
-                margin-bottom: 1rem;
+                margin-bottom: 2.5rem;
+
+                @media only screen and (max-width: 648px) {
+                    font-size: 3.5rem;
+                }
             }
 
             .heroSub {
                 color: var(--color-bg0);
                 line-height: 1.9;
                 font-size: 1.2rem;
+
+                @media only screen and (max-width: 648px) {
+                    font-size: 1.8rem;
+                }
             }
 
             img {
