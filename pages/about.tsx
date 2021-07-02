@@ -13,7 +13,7 @@ import JSLogo from "../icons/js.svg";
 import TSLogo from "../icons/ts.svg";
 import NodeJSLogo from "../icons/nodejs.svg";
 import ReactNativeLogo from "../icons/react.svg";
-import PythonLogo from "../icons/Python.svg";
+import PythonLogo from "../icons/python.svg";
 import JavaLogo from "../icons/java.svg";
 import CPPLogo from "../icons/c++.svg";
 
