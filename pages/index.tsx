@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -100,10 +99,6 @@ export default function Home() {
                         >
                             <div className={styles.heroProfileCard}>
                                 <div className={styles.imageContainer}>
-                                    {/* <Image
-                                        priority
-                                        placeholder="blur"
-                                        layout="fill" */}
                                     <img
                                         src="/images/me.png"
                                         className={styles.profilePhoto}
@@ -189,7 +184,6 @@ const Project: React.FC<ProjectProps> = ({
                     )}
                 </AnimatePresence>
                 <div className={`${styles.projectImage}`}>
-                    {/* <Image */}
                     <img
                         src={image}
                         alt={name}
