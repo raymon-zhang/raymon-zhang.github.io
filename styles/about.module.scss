@@ -76,7 +76,6 @@
 .skills {
     width: 85vw;
     max-width: 85vw;
-    padding-left: 2rem;
 
     .skillsHeading {
         font-weight: normal;
@@ -86,7 +85,7 @@
 
     .skillGrid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 2rem;
 
         .skillCard {
@@ -95,6 +94,7 @@
             padding: 2rem;
             box-shadow: 0px 5px 10px var(--color-shadow);
             font-size: 1.5rem;
+            max-width: 85vw;
             display: flex;
             align-items: center;
 
