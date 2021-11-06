@@ -15,8 +15,8 @@ export default function Home() {
             <section className={styles.hero}>
                 <div className={styles.heroContainer}>
                     <motion.div
-                        initial={{ width: "0vw" }}
-                        animate={{ width: "50vw" }}
+                        initial={{ transform: "scaleX(0)" }}
+                        animate={{ transform: "scaleX(1)" }}
                         transition={{
                             delay: 0.2,
                             ease: "easeOut",
