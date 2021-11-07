@@ -189,12 +189,10 @@ export default function Home() {
                                 piano, or learning about new technologies.
                             </p>
                         </div>
-                        <Image
-                            src={meImage}
+                        <img
+                            src="/images/me.png"
                             width={240}
                             height={300}
-                            objectFit="cover"
-                            placeholder="blur"
                             className={styles.aboutImage}
                         />
                     </div>
