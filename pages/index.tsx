@@ -171,25 +171,26 @@ export default function Home() {
                     <div className={styles.aboutContainer}>
                         <div className={styles.aboutText}>
                             <p className={styles.aboutBody}>
-                                I'm Raymon, an enthusiastic and passionate
+                                {"I'm"} Raymon, an enthusiastic and passionate
                                 student developer from Belleve, Washington.
-                                Currently, I'm a {curGrade} at Interlake High
-                                School enrolled in the ALS IB program, and have
-                                a strong focus on academics heading into the
-                                future.
+                                Currently, {"I'm"} a {curGrade} at Interlake
+                                High School enrolled in the ALS IB program, and
+                                have a strong focus on academics heading into
+                                the future.
                             </p>
                             <p className={styles.aboutBody}>
                                 Outside of school, I spend the majority of my
                                 time programming, mainly focusing on competitive
-                                programming and web development. When I'm not
-                                coding, you'll find me drawing, playing the
-                                piano, or learning about new technologies.
+                                programming and web development. When {"I'm"}{" "}
+                                not coding, {"you'll"} find me drawing, playing
+                                the piano, or learning about new technologies.
                             </p>
                         </div>
                         <img
                             src="/images/me.png"
                             width={240}
                             height={300}
+                            alt="me"
                             className={styles.aboutImage}
                         />
                     </div>
