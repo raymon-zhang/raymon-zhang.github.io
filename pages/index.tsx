@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,7 +8,6 @@ import { DefaultLayout } from "../layouts/DefaultLayout";
 
 import styles from "../styles/Home.module.scss";
 
-import meImage from "../public/images/me.png";
 import Reveal from "../components/Reveal";
 
 export default function Home() {
