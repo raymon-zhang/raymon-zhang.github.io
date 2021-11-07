@@ -25,6 +25,11 @@ const Navbar: React.FC = () => {
                         <a>contact</a>
                     </Link>
                 </li>
+                <li className="navLink">
+                    <Link href="/blog">
+                        <a>blog</a>
+                    </Link>
+                </li>
             </ul>
         </nav>
     );
