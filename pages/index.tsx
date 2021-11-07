@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +10,20 @@ import { DefaultLayout } from "../layouts/DefaultLayout";
 
 import styles from "../styles/Home.module.scss";
 
+import meImage from "../public/images/me.png";
+import Reveal from "../components/Reveal";
+
 export default function Home() {
+    const grades = ["freshman", "sophpmore", "junior", "senior"];
+    const curDate = new Date();
+    let curYear = curDate.getFullYear();
+
+    if (curDate.getMonth() <= 6) {
+        curYear -= 1;
+    }
+
+    const curGrade = grades[4 - (2025 - curYear)];
+
     return (
         <DefaultLayout>
             <section className={styles.hero}>
@@ -74,9 +88,10 @@ export default function Home() {
                                 }}
                             >
                                 <h2 className={styles.heroSubtitle}>
-                                    An <mark>avid</mark> full-stack software{" "}
-                                    <mark>engineer</mark>
-                                    <mark className={styles.period}>.</mark>
+                                    An <mark>avid</mark> student/
+                                    <mark>developer</mark> who enjoys creating{" "}
+                                    <mark>innovative</mark> solutions to{" "}
+                                    <mark>complex</mark> problems<mark>.</mark>
                                 </h2>
                             </motion.div>
                         </div>
@@ -127,7 +142,80 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <section className={styles.about} id="about">
+                <Reveal
+                    motionProps={{
+                        initial: { y: 100, opacity: 0 },
+                        animate: { y: 0, opacity: 1 },
+                        exit: { y: 100, opacity: 0 },
+                        transition: {
+                            duration: 0.5,
+                            type: "spring",
+                            bounce: 0.5,
+                            damping: 12,
+                        },
+                    }}
+                >
+                    <h1 className={styles.aboutHeading}>About me</h1>
+                </Reveal>
+                <Reveal
+                    motionProps={{
+                        initial: { x: 100, opacity: 0 },
+                        animate: { x: 0, opacity: 1 },
+                        exit: { x: 100, opacity: 0 },
+                        transition: {
+                            duration: 0.5,
+                            type: "spring",
+                            bounce: 0.5,
+                            damping: 12,
+                        },
+                    }}
+                >
+                    <div className={styles.aboutContainer}>
+                        <div className={styles.aboutText}>
+                            <p className={styles.aboutBody}>
+                                I'm Raymon, an enthusiastic and passionate
+                                student developer from Belleve, Washington.
+                                Currently, I'm a {curGrade} at Interlake High
+                                School enrolled in the ALS IB program, and have
+                                a strong focus on academics heading into the
+                                future.
+                            </p>
+                            <p className={styles.aboutBody}>
+                                Outside of school, I spend the majority of my
+                                time programming, mainly focusing on competitive
+                                programming and web development. When I'm not
+                                coding, you'll find me drawing, playing the
+                                piano, or learning about new technologies.
+                            </p>
+                        </div>
+                        <Image
+                            src={meImage}
+                            width={240}
+                            height={300}
+                            objectFit="cover"
+                            placeholder="blur"
+                            className={styles.aboutImage}
+                        />
+                    </div>
+                </Reveal>
+            </section>
             <section className={styles.projects} id="projects">
+                <Reveal
+                    motionProps={{
+                        initial: { y: 100, opacity: 0 },
+                        animate: { y: 0, opacity: 1 },
+                        exit: { y: 100, opacity: 0 },
+                        transition: {
+                            duration: 0.5,
+                            type: "spring",
+                            bounce: 0.5,
+                            damping: 12,
+                        },
+                    }}
+                >
+                    <h1 className={styles.projectsHeading}>Notable Projects</h1>
+                </Reveal>
                 <ul className={styles.projectsList}>
                     <Project
                         link="https://kidoop.ga/"
@@ -142,6 +230,25 @@ export default function Home() {
                         description="Empowering families to stay organized"
                     />
                 </ul>
+            </section>
+            <section className={styles.contact}>
+                <Reveal
+                    motionProps={{
+                        initial: { opacity: 0, y: 100 },
+                        animate: { opacity: 1, y: 0 },
+                        exit: { opacity: 0, y: 100 },
+                    }}
+                    className={styles.contactContent}
+                    threshold={0.5}
+                >
+                    <h3>Interested in working together? Lets talk. </h3>
+                    <p>
+                        You can email me at{" "}
+                        <a href="mailto:raymonzhang.rz@gmail.com?subject=Let%27s work together">
+                            raymonzhang.rz@gmail.com
+                        </a>
+                    </p>
+                </Reveal>
             </section>
         </DefaultLayout>
     );
