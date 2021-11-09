@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export default function Post({ postData }) {
+export default function Post({ postData }: { postData: frontMatterType }) {
     return (
         <DefaultLayout>
             {postData.title}
