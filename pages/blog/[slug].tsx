@@ -29,7 +29,7 @@ export default function Post({ postData }: { postData: frontMatterType }) {
             {postData.slug}
             <br />
             {postData.date}
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml! }} />
         </DefaultLayout>
     );
 }
