@@ -12,6 +12,7 @@ export interface frontMatterType {
     title: string;
     date: string;
     slug: string;
+    contentHtml: string;
 }
 
 export function getSortedPostsData() {
