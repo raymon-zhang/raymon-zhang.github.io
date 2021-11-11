@@ -12,6 +12,7 @@
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
     "@types/nodemailer": "^6.4.2",
+    "date-fns": "^2.25.0",
     "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "next": "11.0.1",
