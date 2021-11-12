@@ -33,8 +33,10 @@ export default function Post({ postData }: { postData: frontMatterType }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <article>
-                <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+            <article className={styles.postArticle}>
+                <h1 className={`${utilStyles.headingXl} ${styles.postTitle}`}>
+                    {postData.title}
+                </h1>
                 <div className={`${utilStyles.lightText} ${styles.date}`}>
                     <Date dateString={postData.date} />
                 </div>
