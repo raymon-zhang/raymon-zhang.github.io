@@ -3,8 +3,11 @@ import path from "path";
 
 import matter from "gray-matter";
 
-import remark from "remark";
-import html from "remark-html";
+import unified from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -12,6 +15,7 @@ export interface frontMatterType {
     title: string;
     date: string;
     slug: string;
+    coverImage: string;
     contentHtml?: string;
 }
 
@@ -23,14 +27,16 @@ export function getSortedPostsData() {
         const fullPath = path.join(postsDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, "utf8");
 
-        const { title, date } = matter(fileContents).data;
+        const { title, date, coverImage } = matter(fileContents).data;
 
         return {
             slug,
             title,
             date,
+            coverImage,
         };
     });
+
     return allPostsData.sort(({ date: a }, { date: b }) => {
         if (a < b) {
             return 1;
@@ -60,10 +66,15 @@ export async function getPostData(slug?: string | string[]) {
 
     const {
         content,
-        data: { title, date },
+        data: { title, date, coverImage },
     } = matter(fileContents);
 
-    const processedContent = await remark().use(html).process(content);
+    const processedContent = await unified()
+        .use(remarkParse)
+        .use(remarkRehype)
+        .use(rehypeHighlight)
+        .use(rehypeStringify)
+        .process(content);
     const contentHtml = processedContent.toString();
 
     return {
@@ -71,5 +82,6 @@ export async function getPostData(slug?: string | string[]) {
         contentHtml,
         title,
         date,
+        coverImage,
     };
 }
