@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import unified from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+// @ts-expect-error
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 
