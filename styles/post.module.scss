@@ -1,5 +1,6 @@
 .blogDescription {
     margin-top: 3rem;
+    max-width: 80vw;
 
     .meImageContainer {
         text-align: center;
@@ -15,6 +16,7 @@
 
 .index {
     text-align: center;
+    max-width: 80vw;
 
     .blogItem {
         background-color: var(--color-bg60);
@@ -27,6 +29,10 @@
         height: 150px;
         cursor: pointer;
 
+        @media only screen and (max-width: 405px) {
+            height: 100px;
+        }
+
         .blogItemImage {
             background-color: white;
             height: 100%;
@@ -38,7 +44,7 @@
         }
 
         .blogItemData {
-            padding: 20px 30px;
+            padding: 0px 30px;
 
             .blogItemTitle {
                 font-size: 1.5rem;
@@ -60,6 +66,14 @@
 .postArticle {
     max-width: 50vw;
     font-size: 1.2rem;
+
+    @media only screen and (max-width: 1280px) {
+        max-width: 60vw;
+    }
+
+    @media only screen and (max-width: 700px) {
+        max-width: 80vw;
+    }
 
     a {
         color: var(--color-accent);
