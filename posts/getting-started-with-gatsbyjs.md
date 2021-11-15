@@ -61,3 +61,22 @@ You will be asked a series of questions.
     ? Shall we do this? (Y/n) › Yes
     ```
     Enter **"Y"**, and the site will begin to build.
+    When it finished, you should see an output like this:
+    ```text
+    🎉  Your new Gatsby site Gatsby Demo has been successfully
+    created at ~/Desktop/gatsby-demo.
+
+    Start by going to the directory with
+      cd gatsby-demo
+
+    Start the local development server with
+      npm run develop
+
+    See all commands at
+      https://www.gatsbyjs.com/docs/gatsby-cli/
+    ```
+
+The Gatsby CLI helps you quickly get your website up and running with several official starter templates. The site you've just created uses the [Gatsby default starter](https://github.com/gatsbyjs/gatsby-starter-default), but you can create a site with a different template by using the following pattern: 
+```bash
+gatsby new [DIRECTORY_NAME] [URL_OF_STARTER_REPO]
+```
