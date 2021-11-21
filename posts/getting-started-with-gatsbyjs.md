@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Gatsby.js"
 date: "2021-11-08"
-coverImage: "/images/postData/gatsby.png"
+coverImage: "/images/postData/getting-started-wtih-gatsbyjs/gatsby.png"
 ---
 
 # What is Gatsby?
@@ -26,57 +26,34 @@ Make sure that you are on v3 or newer.
 ## Create a new site
 Now, its time to initialize a new Gastby site. To do this, navigate to the folder where you want to create your site, and run:
 ```text
-gatsby new
+gatsby new gatsby-demo
 ```
-You will be asked a series of questions. 
-1. When the prompt asks **"What would you like to call your site?"**, enter a name, such as "Gatsby Demo". 
-    ```text
-    What would you like to call your site?
-    ✔ · Gatsby Demo
-    ```
-2. Next, when the prompt asks **"What would you like to name the folder where your site will be created?"**, use the default folder name.
-    ```text
-    What would you like to name the folder where your site will be created?
-    ✔ Desktop/ gatsby-demo
-    ```
-3. Choose "No (or I'll add it later)" for the next two prompts asking **"Will you be using a CMS"** and **"Would you like to install a styling system?"**.
-    ```text
-    ✔ Will you be using a CMS?
-    · No (or I'll add it later)
-    ```
-    ```text
-    ✔ Would you like to install a styling system?
-    · No (or I'll add it later)
-    ```
-4. When the prompt asks **"Would you like to install aditional features with other plugins?"**, use the arrow keys to move to the bottom and press Enter to select "Done".
-    ```text
-    ✔ Would you like to install additional features with other plugins?
-    · Done
-    ```
-5. Finally, the prompt should show you something similar to this:
-    ```text
-    Thanks! Here's what we'll now do:
-        🛠  Create a new Gatsby site in the folder gastby-demo
 
-    ? Shall we do this? (Y/n) › Yes
-    ```
-    Enter **"Y"**, and the site will begin to build.
-    When it finished, you should see an output like this:
-    ```text
-    🎉  Your new Gatsby site Gatsby Demo has been successfully
-    created at ~/Desktop/gatsby-demo.
+After it finishes, it should output a message like this:
+```text
+Your net Gatsby site has been successfully bootstrapped. Start developing it by running:
 
-    Start by going to the directory with
-      cd gatsby-demo
+  cd gatsby-demo
+  gatsby develop
 
-    Start the local development server with
-      npm run develop
-
-    See all commands at
-      https://www.gatsbyjs.com/docs/gatsby-cli/
-    ```
+```
 
 The Gatsby CLI helps you quickly get your website up and running with several official starter templates. The site you've just created uses the [Gatsby default starter](https://github.com/gatsbyjs/gatsby-starter-default), but you can create a site with a different template by using the following pattern: 
 ```bash
 gatsby new [DIRECTORY_NAME] [URL_OF_STARTER_REPO]
 ```
+
+To view your new site, first move into the `gatsby-demo` directory by running
+```bash
+cd gatsby-demo
+```
+and then starting the local server
+```bash
+gatsby develop
+```
+
+In your browser, navigate to [http://localhost:8000](http://localhost:8000), and you should see your site looking something like this:
+![Gatsby Default Starter](/images/postData/getting-started-with-gatsbyjs/gatsby-default-starter.png)
+
+# Folder structure
+Now that that's done, it's time to take a look at the files inside your project. 
