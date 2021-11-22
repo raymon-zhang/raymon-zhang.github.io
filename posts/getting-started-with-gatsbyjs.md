@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Gatsby.js"
 date: "2021-11-08"
-coverImage: "/images/postData/getting-started-wtih-gatsbyjs/gatsby.png"
+coverImage: "/images/postData/getting-started-with-gatsbyjs/gatsby.png"
 ---
 
 # What is Gatsby?
