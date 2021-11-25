@@ -183,7 +183,7 @@ export default function Home() {
                                 time programming, mainly focusing on competitive
                                 programming and web development. When {"I'm"}{" "}
                                 not coding, {"you'll"} find me drawing, playing
-                                the piano, or learning about new technologies.
+                                the piano, or competing in math competitions.
                             </p>
                         </div>
                         <img
