@@ -87,6 +87,34 @@ a {
     padding: 0 7.5vw;
     background-color: var(--color-bg100);
     box-shadow: 0px 5px 20px var(--color-shadow);
+    display: flex;
+
+    .logoListItem {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-right: auto;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4rem;
+            font-family: Inconsolata;
+            line-height: 1.5;
+
+            &:hover {
+                color: var(--color-accent);
+            }
+
+            svg {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+            }
+        }
+    }
 
     ul {
         list-style: none;
@@ -102,30 +130,6 @@ a {
             color: var(--color-bg0);
             height: 100%;
 
-            &.logoListItem {
-                margin-right: auto;
-
-                .logo {
-                    display: flex;
-                    align-items: center;
-                    font-size: 1.1rem;
-                    text-transform: uppercase;
-                    letter-spacing: 0.4rem;
-                    font-family: Inconsolata;
-                    line-height: 1.5;
-
-                    &:hover {
-                        color: var(--color-accent);
-                    }
-
-                    svg {
-                        width: 50px;
-                        height: 50px;
-                        margin-right: 20px;
-                    }
-                }
-            }
-
             &.navLink {
                 font-weight: normal;
                 font-size: 1.5rem;
@@ -135,6 +139,35 @@ a {
                 &:hover {
                     color: var(--color-accent);
                 }
+            }
+        }
+    }
+
+    .mobileMenuButton {
+        border: none;
+        background-color: transparent;
+        font-size: 0;
+        color: inherit;
+        padding: 0;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .mobileMenu {
+        position: absolute;
+        right: 0;
+        top: var(--navbar-height);
+        height: calc(100vh - var(--navbar-height));
+        background-color: var(--color-bg100);
+        font-size: 3rem;
+
+        .mobileMenuList {
+            flex-direction: column;
+
+            li {
+                height: auto;
+                padding: 0px 50px;
+                margin: 30px 0px;
             }
         }
     }
