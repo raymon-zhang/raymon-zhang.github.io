@@ -220,7 +220,7 @@ export default function Home() {
                         description="Helping students find their teachers"
                     />
                     <Project
-                        link="https://dynamily.tk/"
+                        link="https://dynamily.ga/"
                         image="/images/dynamily.png"
                         name="Dynamily"
                         description="Empowering families to stay organized"
