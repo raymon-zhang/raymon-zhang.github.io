@@ -11,7 +11,7 @@ import styles from "../styles/Home.module.scss";
 import Reveal from "../components/Reveal";
 
 export default function Home() {
-    const grades = ["freshman", "sophpmore", "junior", "senior"];
+    const grades = ["freshman", "sophomore", "junior", "senior"];
     const curDate = new Date();
     let curYear = curDate.getFullYear();
 
@@ -172,7 +172,7 @@ export default function Home() {
                         <div className={styles.aboutText}>
                             <p className={styles.aboutBody}>
                                 {"I'm"} Raymon, an enthusiastic and passionate
-                                student developer from Belleve, Washington.
+                                student developer from Bellevue, Washington.
                                 Currently, {"I'm"} a {curGrade} at Interlake
                                 High School enrolled in the ALS IB program, and
                                 have a strong focus on academics heading into
